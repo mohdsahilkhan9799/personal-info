@@ -12,7 +12,7 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { useForm, ValidationError } from "@formspree/react";
+
 
 const NavbarPage = () => {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
@@ -46,21 +46,7 @@ const NavbarPage = () => {
   };
  
 
-  const [state, handleSubmit] = useForm("mwkgbqbo"); // Replace with your Formspree ID
-  const [showNotification, setShowNotification] = useState(false);
 
-  useEffect(() => {
-    AOS.init({ duration: 1200 });
-  }, []);
-
-  // When submission succeeds, show the toast notification for 3 seconds.
-  useEffect(() => {
-    if (state.succeeded) {
-      setShowNotification(true);
-      const timer = setTimeout(() => setShowNotification(false), 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [state.succeeded]);
   return (
     <>
       <nav
@@ -194,121 +180,6 @@ const NavbarPage = () => {
         </div>
       </nav>
 
-      {/* Modal for Registration */}
-      <div
-      className="modal fade enquiry-modal"
-      id="exampleModal"
-      tabIndex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-    >
-      <div className="modal-dialog modal-dialog-centered">
-        <div className="modal-content modaltrs" data-aos="zoom-in">
-          <button
-            type="button"
-            className="btn-close ms-auto px-4 pt-3"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-          <div className="container d-flex justify-content-center align-items-center">
-            <div className="p-4 backteck">
-              <div className="card-body text-center">
-                <div className="icon-wrapper">
-                  <i
-                    className="feather icon-user-plus auth-icon"
-                    style={{ fontSize: "2.5rem", color: "#007bff" }}
-                  ></i>
-                </div>
-                <h3 className="mb-4 chektest">Enquire</h3>
-                <form onSubmit={handleSubmit} className="contact-form">
-                  <div className="row">
-                    <div className="col-md-6 mb-3">
-                      <input 
-                        type="text" 
-                        name="name" 
-                        className="form-control rounded-pill" 
-                        placeholder="Your Name" 
-                        required 
-                      />
-                      <ValidationError 
-                        prefix="Name" 
-                        field="name" 
-                        errors={state.errors} 
-                        className="error"
-                      />
-                    </div>
-                    <div className="col-md-6 mb-3">
-                      <input 
-                        type="email" 
-                        name="email" 
-                        className="form-control rounded-pill" 
-                        placeholder="Your Email" 
-                        required 
-                      />
-                      <ValidationError 
-                        prefix="Email" 
-                        field="email" 
-                        errors={state.errors} 
-                        className="error"
-                      />
-                    </div>
-                  </div>
-                  <div className="mb-3">
-                    <input 
-                      type="text" 
-                      name="subject" 
-                      className="form-control rounded-pill" 
-                      placeholder="Subject" 
-                      required 
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <textarea 
-                      name="message" 
-                      className="form-control" 
-                      rows="5" 
-                      placeholder="Message" 
-                      required
-                    ></textarea>
-                    <ValidationError 
-                      prefix="Message" 
-                      field="message" 
-                      errors={state.errors} 
-                      className="error"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <button 
-                      type="submit" 
-                      disabled={state.submitting} 
-                      className="submit-button"
-                    >
-                      {state.submitting ? "Sending..." : "Send Message"}
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Toast Notification */}
-      {showNotification && (
-        <div className="toast-notification" data-aos="fade-up">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv8NrkQQ3JdnSafmj1OxzwRWOmN2LU91W05Ruqn-Ym05ucVOizo7429SK668id7JrGrgo&usqp=CAU"
-            alt="Success"
-            className="toast-image"
-          />
-          <p className="toast-message">
-            Thank you for your message! 😊 We will get back to you soon!
-          </p>
-        </div>
-      )}
-    </div>
     </>
   );
 };
