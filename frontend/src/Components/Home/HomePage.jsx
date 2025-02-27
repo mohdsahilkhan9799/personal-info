@@ -45,6 +45,76 @@ const skills = [
   { name: 'Netlify', icon: netlifyIcon },
   { name: 'Vercel', icon: vercelIcon },
 ];
+
+const educationDetails = [
+  {
+    id: 1,
+    title: 'B.Tech in Computer Science',
+    institution: 'Manav Rachna University, New Delhi',
+    duration: '2018 - 2022',
+    image: campus,
+    description:
+      'Completed an intensive program in Computer Science with a focus on modern web technologies and software development methodologies.',
+  },
+  {
+    id: 2,
+    title: 'Senior Secondary Education',
+    institution: 'Rehbar E Aam Public School',
+    duration: '2016 - 2018',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5tJufQp_UDfbSXMyh-_s7_uB2CxxOCaZKQ&s',
+    description:
+      'Developed a strong foundation in science and mathematics, participating actively in extracurricular activities.',
+  },
+  {
+    id: 3,
+    title: 'High School',
+    institution: 'XYZ High School, Delhi',
+    duration: '2014 - 2016',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5tJufQp_UDfbSXMyh-_s7_uB2CxxOCaZKQ&s',
+    description:
+      'Achieved excellent academic performance and engaged in various co-curricular activities.',
+  },
+];
+
+const certificatesData = [
+  {
+    id: 1,
+    title: 'Full Stack Development',
+    institution: 'ABC Institute',
+    date: 'January 2023',
+    image: crt1,
+    description:
+      'Completed an intensive full stack development course focusing on MERN technologies and practical project work.',
+  },
+  {
+    id: 2,
+    title: 'React & Redux Mastery',
+    institution: 'XYZ Academy',
+    date: 'March 2023',
+    image: crt1,
+    description:
+      'Certified for advanced knowledge in React and Redux, covering best practices, design patterns, and state management.',
+  },
+  {
+    id: 3,
+    title: 'JavaScript Essentials',
+    institution: '123 Training',
+    date: 'May 2023',
+    image: crt1,
+    description:
+      'Gained comprehensive understanding of modern JavaScript, including ES6+ features and asynchronous programming.',
+  },
+  {
+    id: 4,
+    title: 'UI/UX Design Certification',
+    institution: 'Design Institute',
+    date: 'July 2023',
+    image: crt1,
+    description:
+      'Certified in designing user-friendly interfaces, emphasizing the importance of user experience and design aesthetics.',
+  },
+];
 const HomePage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -90,6 +160,9 @@ const HomePage = () => {
       }
     };
  
+    const [selectedEducation, setSelectedEducation] = useState(null);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
   const projectsData = [
     {
       id: 1,
@@ -201,6 +274,9 @@ const HomePage = () => {
       </div>
     );
   }
+
+
+  
   return (
     <>
       {/* HERO SECTION */}
@@ -457,119 +533,122 @@ const HomePage = () => {
       )}
     </section>
 
-    <div className="education-page"style={{overflow:"hidden"}} id='education'>
+<div className="education-page">
       {/* Banner Section */}
-      <section className="education-banner">
-      <div className="banner-overlay" data-aos="fade-up">
-        <h2 className="edu-title"data-aos="fade-up">My Education</h2>
-        <p className="edu-subtitle"data-aos="fade-down">Journey of Learning &amp; Growth</p>
-      </div>
-    </section>
+      <section className="edu-banner">
+        <div className="banner-overlay" data-aos="fade">
+          <h1>My Education</h1>
+          <p>Journey of Learning &amp; Growth</p>
+        </div>
+      </section>
 
       {/* Education Details Section */}
-      <section className="edu-details py-5"style={{overflow:"hidden"}}>
+      <section className="edu-details py-5" style={{ overflow: "hidden" }}>
         <div className="container">
           <h2 className="section-title" data-aos="fade-up">
             Education Details
           </h2>
           <div className="edu-cards">
-            <div className="edu-card" data-aos="fade-right">
-              <img src={campus} alt="College Campus" className="edu-img" />
-              <div className="edu-info">
-                <h3>B.Tech in Computer Science</h3>
-                <p>Manav Rachna University, New Delhi</p>
-                <span>2018 - 2022</span>
+            {educationDetails.map((edu) => (
+              <div
+                key={edu.id}
+                className="edu-card"
+                data-aos={edu.id % 2 === 0 ? "fade-left" : "fade-right"}
+                onClick={() => setSelectedEducation(edu)}
+              >
+                <img src={edu.image} alt={edu.title} className="edu-img" />
+                <div className="edu-info">
+                  <h3>{edu.title}</h3>
+                  <p>{edu.institution}</p>
+                  <span>{edu.duration}</span>
+                  <p className="edu-desc">{edu.description}</p>
+                </div>
               </div>
-            </div>
-            <div className="edu-card" data-aos="fade-left">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5tJufQp_UDfbSXMyh-_s7_uB2CxxOCaZKQ&s"
-                alt="School Campus"
-                className="edu-img"
-              />
-              <div className="edu-info">
-                <h3>Senior Secondary Education</h3>
-                <p>Rehbar E Aam Public School</p>
-                <span>2016 - 2018</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Certificates Section */}
-      <section className="certificates-section py-5"style={{overflow:"hidden"}}>
+      <section className="certificates-section py-5" style={{ overflow: "hidden" }}>
         <div className="container">
           <h2 className="section-title" data-aos="fade-up">
             Certificates
           </h2>
           <div className="certificates-grid">
-            <div className="certificate-card" data-aos="zoom-in">
-              <img src={crt1} alt="Certificate 1" />
-              <h4>Full Stack Development</h4>
-              <p>Issued by ABC Institute</p>
-            </div>
-            <div
-              className="certificate-card"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <img src={crt1} alt="Certificate 2" />
-              <h4>React &amp; Redux</h4>
-              <p>Issued by XYZ Academy</p>
-            </div>
-            <div
-              className="certificate-card"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <img src={crt1} alt="Certificate 3" />
-              <h4>JavaScript Essentials</h4>
-              <p>Issued by 123 Training</p>
-            </div>
+            {certificatesData.map((cert) => (
+              <div
+                key={cert.id}
+                className="certificate-card"
+                data-aos="zoom-in"
+                data-aos-delay={cert.id * 100}
+                onClick={() => setSelectedCertificate(cert)}
+              >
+                <img src={cert.image} alt={cert.title} />
+                <h4>{cert.title}</h4>
+                <p>{cert.institution}</p>
+                <span>{cert.date}</span>
+                <p className="cert-desc">{cert.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Achievements Section */}
-      <section className="achievements-section py-5" style={{overflow:"hidden"}}>
+      <section className="achievements-section py-5">
         <div className="container">
-          <h2 className="section-title" data-aos="fade-up">
-            Achievements
-          </h2>
+          <h2 className="section-title" data-aos="fade-up">Achievements</h2>
           <div className="achievements-list">
             <div className="achievement-item" data-aos="fade-right">
               <h4>Best Developer Award</h4>
               <p>
-                Awarded by Manav Rachna University in 2022 for exceptional
-                project work.
+                Awarded by Manav Rachna University in 2022 for exceptional project work.
               </p>
             </div>
-            <div
-              className="achievement-item"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
+            <div className="achievement-item" data-aos="fade-left" data-aos-delay="100">
               <h4>Certificate of Excellence</h4>
               <p>
-                Recognized by ABC Institute for outstanding performance in full
-                stack development.
+                Recognized by ABC Institute for outstanding performance in full stack development.
               </p>
             </div>
-            <div
-              className="achievement-item"
-              data-aos="fade-right"
-              data-aos-delay="200"
-            >
+            <div className="achievement-item" data-aos="fade-right" data-aos-delay="200">
               <h4>Innovative Project Award</h4>
               <p>
-                Honored for developing a unique web application that solved
-                real-world problems.
+                Honored for developing a unique web application that solved real-world problems.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Modal for Education Details */}
+      {selectedEducation && (
+        <div className="modal-overlay" onClick={() => setSelectedEducation(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()} data-aos="zoom-in">
+            <span className="close-modal" onClick={() => setSelectedEducation(null)}>&times;</span>
+            <img src={selectedEducation.image} alt={selectedEducation.title} className="modal-image" />
+            <h3>{selectedEducation.title}</h3>
+            <p className="modal-institution">{selectedEducation.institution}</p>
+            <span className="modal-duration">{selectedEducation.duration}</span>
+            <p className="modal-description">{selectedEducation.description}</p>
+          </div>
+        </div>
+      )}
+
+      {/* Modal for Certificates */}
+      {selectedCertificate && (
+        <div className="modal-overlay" onClick={() => setSelectedCertificate(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()} data-aos="zoom-in">
+            <span className="close-modal" onClick={() => setSelectedCertificate(null)}>&times;</span>
+            <img src={selectedCertificate.image} alt={selectedCertificate.title} className="modal-image" />
+            <h3>{selectedCertificate.title}</h3>
+            <p className="modal-institution">{selectedCertificate.institution}</p>
+            <span className="modal-duration">{selectedCertificate.date}</span>
+            <p className="modal-description">{selectedCertificate.description}</p>
+          </div>
+        </div>
+      )}
     </div>
 
 

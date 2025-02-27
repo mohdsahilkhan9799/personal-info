@@ -721,25 +721,28 @@ html, body {
 }
 
 /* ===================== BANNER SECTION ===================== */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Import a modern font (optional) */
+.education-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
 
-.education-banner {
+/* ===================== BANNER SECTION ===================== */
+.edu-banner {
   position: relative;
   width: 100%;
-  height: 60vh; /* Adjust the height as desired */
+  height: 60vh;
+  /* Update the URL with your actual banner image */
   background: url('../../Logo/image.png') no-repeat center center/cover;
-  /* If using a local image, do something like: 
-     background: url('../../assets/campus-image.jpg') no-repeat center center/cover; */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
 }
 
 .banner-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark overlay */
+  background: rgba(0, 0, 0, 0.55);
   width: 100%;
   height: 100%;
   display: flex;
@@ -751,31 +754,6 @@ html, body {
   padding: 20px;
 }
 
-.edu-title {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.edu-subtitle {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .education-banner {
-    height: 40vh;
-  }
-  .edu-title {
-    font-size: 2rem;
-  }
-  .edu-subtitle {
-    font-size: 1rem;
-  }
-}
-
-
 .banner-overlay h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
@@ -786,7 +764,7 @@ html, body {
   margin: 0;
 }
 
-/* ===================== EDUCATION DETAILS ===================== */
+/* ===================== EDUCATION DETAILS SECTION ===================== */
 .edu-details {
   padding: 60px 20px;
   background: #fdfdfd;
@@ -800,6 +778,7 @@ html, body {
   color: #222;
 }
 
+/* Education Cards */
 .edu-cards {
   display: flex;
   flex-wrap: wrap;
@@ -816,6 +795,7 @@ html, body {
   max-width: 500px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .edu-card:hover {
@@ -850,6 +830,12 @@ html, body {
   color: #999;
 }
 
+.edu-desc {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
 /* ===================== CERTIFICATES SECTION ===================== */
 .certificates-section {
   background: #eef2f3;
@@ -872,6 +858,7 @@ html, body {
   transition: transform 0.3s ease;
   padding: 20px;
   text-align: center;
+  cursor: pointer;
 }
 
 .certificate-card:hover {
@@ -882,6 +869,7 @@ html, body {
   width: 100%;
   border-bottom: 1px solid #eee;
   margin-bottom: 15px;
+  transition: transform 0.3s ease;
 }
 
 .certificate-card h4 {
@@ -894,6 +882,12 @@ html, body {
   margin: 0;
   font-size: 0.95rem;
   color: #666;
+}
+
+.cert-desc {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* ===================== ACHIEVEMENTS SECTION ===================== */
@@ -930,6 +924,81 @@ html, body {
   margin: 0;
   font-size: 1rem;
   color: #555;
+}
+
+/* ===================== MODAL STYLES ===================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-image {
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.modal-institution {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.modal-duration {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.modal-description {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
 }
 
 /* ===================== RESPONSIVE STYLES ===================== */
