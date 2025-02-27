@@ -931,7 +931,7 @@ html, body {
 }
 
 /* ===================== MODAL STYLES ===================== */
-.modal-overlay {
+/* .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -1003,7 +1003,7 @@ html, body {
   margin-bottom: 20px;
   font-size: 1rem;
   color: #333;
-}
+} */
 
 /* ===================== RESPONSIVE STYLES ===================== */
 @media (max-width: 768px) {
