@@ -99,7 +99,7 @@ const certificatesData = [
     title: 'React & Redux Mastery',
     institution: 'IBM Academy',
     date: 'March 2023',
-    image: crt1,
+    image: "https://i.ytimg.com/vi/c4vuAwgpDEw/maxresdefault.jpg",
     subtitle:"MongoDB, Express, React, and Node. js",
 
     description:
@@ -112,16 +112,16 @@ const certificatesData = [
     date: 'May 2023',
     subtitle:"MongoDB, Express, React, and Node. js",
 
-    image: crt1,
+    image: "https://s3.amazonaws.com/user-assets.codedamn.com/621b104c0eace80009eb5bb4/certificates/eb11f0b575b0a08e11d1c22e5c3d854c62c26f34.jpeg",
     description:
       'Gained comprehensive understanding of modern JavaScript, including ES6+ features and asynchronous programming.',
   },
   {
     id: 4,
-    title: 'UI/UX Design Certification',
+    title: 'Mern Stack Certification',
     institution: 'Design Institute',
     date: 'July 2023',
-    image: crt1,
+    image: "https://s3.amazonaws.com/user-assets.codedamn.com/621b104c0eace80009eb5bb4/certificates/eb11f0b575b0a08e11d1c22e5c3d854c62c26f34.jpeg",
     subtitle:"MongoDB, Express, React, and Node. js",
 
     description:
