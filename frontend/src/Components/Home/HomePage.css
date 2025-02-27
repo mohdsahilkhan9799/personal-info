@@ -335,7 +335,7 @@ html, body {
 /* ===================== PROJECTS SECTION ===================== */
 /* Projects Section Background */
 .projects-section {
-  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  background: linear-gradient(135deg, f7f7f7);
   padding: 100px 20px;
   font-family: 'Poppins', sans-serif;
 }

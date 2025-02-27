@@ -141,24 +141,15 @@ const NavbarPage = () => {
                   Education
                 </a>
               </li>
-
-              <li className="nav-item px-3">
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={(e) => handleMenuClick(e, "contact")}
-                >
-                  Contact
-                </a>
-              </li>
               <li className="nav-item px-3">
                 <Link
                   to="#"
                   className="btn appointment-btn nav-link px-4"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                 
+                  onClick={(e) => handleMenuClick(e, "contact")}
+
                 >
-                  Enquire
+                  Contact
                 </Link>
               </li>
             </ul>
