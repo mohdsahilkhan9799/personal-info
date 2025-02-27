@@ -128,7 +128,8 @@
     animation: bounceMobile 2s infinite;
   }
   .social-icons{
-    margin-left: 128px;
+    margin-left: 100px;
+    margin-top: 20px;
   }
 }
 

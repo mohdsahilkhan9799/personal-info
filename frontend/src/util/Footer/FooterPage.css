@@ -67,4 +67,25 @@
   .footer-section {
     width: 100%;
   }
+
+  .social-icons1{
+    margin-left: 0px !important;
+    margin-top: 20px;
+  }
+  .social-icons1 a {
+    margin-left: 25px;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.social-icons1{
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.social-icons1 a {
+  margin-left: 10px;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
 }

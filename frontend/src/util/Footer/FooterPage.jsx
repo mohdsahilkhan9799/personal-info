@@ -37,13 +37,39 @@ const FooterPage = () => {
     {/* Social Media Section */}
     <div className="footer-section">
       <h3>Follow Me</h3>
-      <div className="social-icons">
-        <a href="https://www.linkedin.com/in/mohd-sahil-a8762924b/" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="https://github.com/mohdsahilkhan9799" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
+      <div className="social-icons1">
+         <a
+                         href="https://www.linkedin.com/in/mohd-sahil-a8762924b/"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="text-white text-center"
+                       >
+                         <FontAwesomeIcon icon={faLinkedin} />
+                       </a>
+                       <a
+                         href="https://github.com/mohdsahilkhan9799"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="text-white text-center"
+                       >
+                         <FontAwesomeIcon icon={faGithub} />
+                       </a>
+                       <a
+                         href="https://www.facebook.com/profile.php?id=100006566191706"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="text-white text-center"
+                       >
+                         <FontAwesomeIcon icon={faFacebookF} />
+                       </a>
+                       <a
+                         href="https://www.instagram.com/mohd_sahil_khan9799/"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="text-white text-center"
+                       >
+                         <FontAwesomeIcon icon={faInstagram} />
+                       </a>
       </div>
     </div>
 
