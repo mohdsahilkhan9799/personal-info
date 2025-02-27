@@ -53,6 +53,7 @@ const educationDetails = [
     institution: 'Manav Rachna University, New Delhi',
     duration: '2018 - 2022',
     image: campus,
+    subtitle:"the structure and organization of content on a webpage",
     description:
       'Completed an intensive program in Computer Science with a focus on modern web technologies and software development methodologies.',
   },
@@ -63,6 +64,8 @@ const educationDetails = [
     duration: '2016 - 2018',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5tJufQp_UDfbSXMyh-_s7_uB2CxxOCaZKQ&s',
+      subtitle:"personalized instruction, active engagement, and consistent practice",
+
     description:
       'Developed a strong foundation in science and mathematics, participating actively in extracurricular activities.',
   },
@@ -72,6 +75,8 @@ const educationDetails = [
     institution: 'XYZ High School, Delhi',
     duration: '2014 - 2016',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5tJufQp_UDfbSXMyh-_s7_uB2CxxOCaZKQ&s',
+    subtitle:"use verbs such as “collaborated,” “cooperated” and “contributed to.” ",
+
     description:
       'Achieved excellent academic performance and engaged in various co-curricular activities.',
   },
@@ -84,15 +89,19 @@ const certificatesData = [
     institution: 'ABC Institute',
     date: 'January 2023',
     image: crt1,
+    subtitle:"MongoDB, Express, React, and Node. js",
+
     description:
       'Completed an intensive full stack development course focusing on MERN technologies and practical project work.',
   },
   {
     id: 2,
     title: 'React & Redux Mastery',
-    institution: 'XYZ Academy',
+    institution: 'IBM Academy',
     date: 'March 2023',
     image: crt1,
+    subtitle:"MongoDB, Express, React, and Node. js",
+
     description:
       'Certified for advanced knowledge in React and Redux, covering best practices, design patterns, and state management.',
   },
@@ -101,6 +110,8 @@ const certificatesData = [
     title: 'JavaScript Essentials',
     institution: '123 Training',
     date: 'May 2023',
+    subtitle:"MongoDB, Express, React, and Node. js",
+
     image: crt1,
     description:
       'Gained comprehensive understanding of modern JavaScript, including ES6+ features and asynchronous programming.',
@@ -111,6 +122,8 @@ const certificatesData = [
     institution: 'Design Institute',
     date: 'July 2023',
     image: crt1,
+    subtitle:"MongoDB, Express, React, and Node. js",
+
     description:
       'Certified in designing user-friendly interfaces, emphasizing the importance of user experience and design aesthetics.',
   },
@@ -561,7 +574,7 @@ const HomePage = () => {
                   <h3>{edu.title}</h3>
                   <p>{edu.institution}</p>
                   <span>{edu.duration}</span>
-                  <p className="edu-desc">{edu.description}</p>
+                  <p className="edu-desc">{edu.subtitle}</p>
                 </div>
               </div>
             ))}
@@ -577,6 +590,7 @@ const HomePage = () => {
           </h2>
           <div className="certificates-grid">
             {certificatesData.map((cert) => (
+              
               <div
                 key={cert.id}
                 className="certificate-card"
@@ -588,7 +602,7 @@ const HomePage = () => {
                 <h4>{cert.title}</h4>
                 <p>{cert.institution}</p>
                 <span>{cert.date}</span>
-                <p className="cert-desc">{cert.description}</p>
+                <p className="cert-desc">{cert.subtitle}</p>
               </div>
             ))}
           </div>
