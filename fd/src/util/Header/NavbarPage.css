@@ -1,0 +1,154 @@
+/* Base Navbar Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.4s ease-in-out;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.85); /* Light transparent white */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Navbar Scrolled Effect */
+.navbar-scrolled {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-scrolled .nav-link {
+  color: rgb(240, 244, 241);
+}
+
+/* Navbar Links */
+.nav-link {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: black;
+  padding: 10px 18px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+  color: #ff9900; /* Warm contrast color */
+  transform: translateY(-2px) scale(1.05);
+  font-size: 1.25rem;
+  text-shadow: 2px 2px 10px rgba(255, 153, 0, 0.3);
+}
+
+/* Underline Animation */
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #ff9900;
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+  z-index: 1050;
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 12px 0;
+    color: black; /* Ensure visibility on dark background */
+  }
+
+  .backgodnav {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+  }
+  .navbar{
+    background: rgba(255, 255, 255, 0.85); /* Light transparent white */
+  }
+  .navbar-scrolled .nav-link{
+    color: black;
+  }
+
+}
+
+/* Appointment Button */
+.appointment-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ffcc66, #ff9966);
+  color: green;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.appointment-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ffaa33, #ff7744);
+  color: white;
+}
+
+/* Logo Styling */
+.logo-left {
+  width: 150px;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Mobile Logo Bounce Animation */
+@media (max-width: 768px) {
+  .logo-left {
+    animation: bounceMobile 2s infinite;
+  }
+  .social-icons{
+    margin-left: 128px;
+  }
+}
+
+@keyframes bounceMobile {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  
+}
+
+/* Social Icons */
+.social-icons a {
+  margin-left: 10px;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #ff9900;
+}
