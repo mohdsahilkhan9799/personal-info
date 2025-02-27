@@ -53,7 +53,7 @@ const educationDetails = [
     institution: 'Manav Rachna University, New Delhi',
     duration: '2018 - 2022',
     image: campus,
-    subtitle:"the structure and organization of content on a webpage",
+    subtitle:"the structure and organization of content on a backned development",
     description:
       'Completed an intensive program in Computer Science with a focus on modern web technologies and software development methodologies.',
   },
@@ -72,7 +72,7 @@ const educationDetails = [
   {
     id: 3,
     title: 'High School',
-    institution: 'XYZ High School, Delhi',
+    institution: 'Rehbar E Aam Public School',
     duration: '2014 - 2016',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5tJufQp_UDfbSXMyh-_s7_uB2CxxOCaZKQ&s',
     subtitle:"use verbs such as “collaborated,” “cooperated” and “contributed to.” ",
@@ -333,7 +333,7 @@ const HomePage = () => {
               </div>
 
               <div className="exp mt-4">
-                <p>5+ Years Experience | 50+ Projects Completed | 50+ Happy Clients</p>
+                <p>5+ Years Experience | 50+ Projects Completed | 5+ Minstry | 20+ Corporate</p>
               </div>
             </div>
 
@@ -401,11 +401,11 @@ const HomePage = () => {
               </div>
               <div className="row mb-2">
                 <div className="col-sm-4 fw-bold">Age:</div>
-                <div className="col-sm-8">25 Years</div>
+                <div className="col-sm-8">26 Years</div>
               </div>
               <div className="row mb-2">
                 <div className="col-sm-4 fw-bold">Email:</div>
-                <div className="col-sm-8">email@example.com</div>
+                <div className="col-sm-8">sksahilkhan111111@gmail.com</div>
               </div>
               <div className="row mb-2">
                 <div className="col-sm-4 fw-bold">Position:</div>
@@ -546,7 +546,7 @@ const HomePage = () => {
       )}
     </section>
 
-<div className="education-page">
+<div className="education-page" id='education'>
       {/* Banner Section */}
       <section className="edu-banner">
         <div className="banner-overlay" data-aos="fade">

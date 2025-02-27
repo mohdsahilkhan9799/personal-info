@@ -149,6 +149,14 @@
   transition: color 0.3s ease-in-out;
 }
 
-.social-icons a:hover {
-  color: #ff9900;
+
+.backteck{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+}.chektest{
+  color: wheat;
+
 }
+
+
