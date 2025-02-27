@@ -696,7 +696,7 @@ const HomePage = () => {
             <div className="contact-card">
               <FontAwesomeIcon icon="fa-solid fa-envelope" size="2x" className="icon" />
               <h5>Email</h5>
-              <p>info@example.com</p>
+              <p>sksahilkhan111111@gmail.com</p>
             </div>
           </div>
         </div>
@@ -765,6 +765,17 @@ const HomePage = () => {
     </form>
 
       </div>
+      <div className="map-container mt-5" data-aos="fade-up" data-aos-delay="200">
+          <iframe
+            title="Location Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2792252182176!2d77.17741497528395!3d28.50124567573666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1e23354518b5%3A0xd2d98ea1ecef657d!2sMagnety%20Salon!5e0!3m2!1sen!2sin!4v1740659266869!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
     </section>
     </>
   );
