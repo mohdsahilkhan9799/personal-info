@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import "./NavbarPage.css"; // Custom CSS
 import logo from "../../Logo/my-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookF,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const NavbarPage = () => {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
@@ -26,7 +31,8 @@ const NavbarPage = () => {
     const section = document.getElementById(id);
     if (section) {
       const offset = 80; // Adjust based on your navbar height
-      const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        section.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
       window.scrollTo({
         top: offsetPosition,
@@ -44,10 +50,14 @@ const NavbarPage = () => {
       >
         <div className="container-fluid d-flex align-items-center justify-content-between">
           {/* Left Logo */}
-          <Link to="/" className="navbar-brand">
-  <img src={logo} alt="Logo" className="logo-left" />
-</Link>
-
+          <Link
+            to="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar-brand"
+          >
+            <img src={logo} alt="Logo" className="logo-left" />
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -106,6 +116,16 @@ const NavbarPage = () => {
                 <a
                   className="nav-link"
                   href="#"
+                  onClick={(e) => handleMenuClick(e, "education")}
+                >
+                  Education
+                </a>
+              </li>
+
+              <li className="nav-item px-3">
+                <a
+                  className="nav-link"
+                  href="#"
                   onClick={(e) => handleMenuClick(e, "contact")}
                 >
                   Contact
@@ -115,7 +135,8 @@ const NavbarPage = () => {
                 <Link
                   to="#"
                   className="btn appointment-btn nav-link px-4"
-                  data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
                 >
                   Enquire
                 </Link>
@@ -128,7 +149,7 @@ const NavbarPage = () => {
                   href="https://www.linkedin.com/in/mohd-sahil-a8762924b/"
                   target="_blank"
                   rel="noopener noreferrer"
-                   className="text-black text-center"
+                  className="text-black text-center"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
@@ -139,6 +160,22 @@ const NavbarPage = () => {
                   className="text-black text-center"
                 >
                   <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100006566191706"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black text-center"
+                >
+                  <FontAwesomeIcon icon={faFacebookF} />
+                </a>
+                <a
+                  href="https://www.instagram.com/mohd_sahil_khan9799/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black text-center"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </div>
             </div>
@@ -223,7 +260,10 @@ const NavbarPage = () => {
                         required
                       />
                     </div>
-                    <button type="submit" className="btn btn-primary w-100 mb-3">
+                    <button
+                      type="submit"
+                      className="btn btn-primary w-100 mb-3"
+                    >
                       Sign up
                     </button>
                   </form>

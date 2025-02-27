@@ -25,6 +25,9 @@ import pdf from '../../Logo/pdf/MOHD-SAHIL-resume.pdf';
 import myvideo from "../../Logo/0_Man_Singing_1080x1080.mp4"
 import { useForm, ValidationError } from '@formspree/react';
 
+import campus from "../../Logo/WhatsApp Image 2025-02-26 at 11.01.05 AM.jpeg";
+import crt1 from "../../Logo/1733210149136.jpg";
+
 const skills = [
   { name: 'React JS', icon: reactIcon },
   { name: 'Redux', icon: reduxIcon },
@@ -363,8 +366,6 @@ const HomePage = () => {
       </div>
     </section>
 
-
-
     <section className="skills-section" id='skills'>
       <div className="container">
         {/* Header */}
@@ -398,8 +399,8 @@ const HomePage = () => {
 
     <section className="projects-section" id='projects'>
       <div className="container">
-        <h2 className="section-heading" data-aos="fade-up" style={{ overflow: 'hidden' }}>
-          Our Projects
+        <h2 className="section-heading text-center" data-aos="fade-up" style={{ overflow: 'hidden' }}>
+           Projects
         </h2>
         <div className="projects-grid">
           {projectsData.map((project) => (
@@ -455,6 +456,121 @@ const HomePage = () => {
         </div>
       )}
     </section>
+
+    <div className="education-page"style={{overflow:"hidden"}} id='education'>
+      {/* Banner Section */}
+      <section className="education-banner">
+      <div className="banner-overlay" data-aos="fade-up">
+        <h2 className="edu-title"data-aos="fade-up">My Education</h2>
+        <p className="edu-subtitle"data-aos="fade-down">Journey of Learning &amp; Growth</p>
+      </div>
+    </section>
+
+      {/* Education Details Section */}
+      <section className="edu-details py-5"style={{overflow:"hidden"}}>
+        <div className="container">
+          <h2 className="section-title" data-aos="fade-up">
+            Education Details
+          </h2>
+          <div className="edu-cards">
+            <div className="edu-card" data-aos="fade-right">
+              <img src={campus} alt="College Campus" className="edu-img" />
+              <div className="edu-info">
+                <h3>B.Tech in Computer Science</h3>
+                <p>Manav Rachna University, New Delhi</p>
+                <span>2018 - 2022</span>
+              </div>
+            </div>
+            <div className="edu-card" data-aos="fade-left">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5tJufQp_UDfbSXMyh-_s7_uB2CxxOCaZKQ&s"
+                alt="School Campus"
+                className="edu-img"
+              />
+              <div className="edu-info">
+                <h3>Senior Secondary Education</h3>
+                <p>Rehbar E Aam Public School</p>
+                <span>2016 - 2018</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificates Section */}
+      <section className="certificates-section py-5"style={{overflow:"hidden"}}>
+        <div className="container">
+          <h2 className="section-title" data-aos="fade-up">
+            Certificates
+          </h2>
+          <div className="certificates-grid">
+            <div className="certificate-card" data-aos="zoom-in">
+              <img src={crt1} alt="Certificate 1" />
+              <h4>Full Stack Development</h4>
+              <p>Issued by ABC Institute</p>
+            </div>
+            <div
+              className="certificate-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <img src={crt1} alt="Certificate 2" />
+              <h4>React &amp; Redux</h4>
+              <p>Issued by XYZ Academy</p>
+            </div>
+            <div
+              className="certificate-card"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <img src={crt1} alt="Certificate 3" />
+              <h4>JavaScript Essentials</h4>
+              <p>Issued by 123 Training</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section className="achievements-section py-5" style={{overflow:"hidden"}}>
+        <div className="container">
+          <h2 className="section-title" data-aos="fade-up">
+            Achievements
+          </h2>
+          <div className="achievements-list">
+            <div className="achievement-item" data-aos="fade-right">
+              <h4>Best Developer Award</h4>
+              <p>
+                Awarded by Manav Rachna University in 2022 for exceptional
+                project work.
+              </p>
+            </div>
+            <div
+              className="achievement-item"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <h4>Certificate of Excellence</h4>
+              <p>
+                Recognized by ABC Institute for outstanding performance in full
+                stack development.
+              </p>
+            </div>
+            <div
+              className="achievement-item"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <h4>Innovative Project Award</h4>
+              <p>
+                Honored for developing a unique web application that solved
+                real-world problems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
 
    <section className="contact-section py-5" id='contact'>

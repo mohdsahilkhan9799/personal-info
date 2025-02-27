@@ -333,59 +333,56 @@ html, body {
 }
 
 /* ===================== PROJECTS SECTION ===================== */
-/* ===================== PROJECTS SECTION ===================== */
+/* Projects Section Background */
 .projects-section {
-  background: #f5f5f5;
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  padding: 100px 20px;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Section Heading */
 .section-heading {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #333;
-  position: relative;
-  overflow: hidden;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #444;
 }
 
-/* Projects Grid: Using CSS Grid for a flexible layout */
+/* Projects Grid Layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Project Card */
+/* Project Card with Glassmorphism */
 .project-card {
-  background: #fff;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Image Wrapper: Circular image */
+/* Circular Image Wrapper */
 .project-image-wrapper {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #eaeaea;
-  margin-bottom: 15px;
+  margin: 0 auto 20px;
+  border: 4px solid #fff;
 }
 
 .project-image {
@@ -394,33 +391,97 @@ html, body {
   object-fit: cover;
 }
 
-/* Project Info */
+/* Project Info Styling */
 .project-info {
-  text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .project-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #333;
 }
 
 .project-date {
-  font-size: 0.9rem;
-  color: #777;
+  font-size: 1rem;
+  color: #666;
 }
 
-/* Arrow Icon */
+/* Arrow Icon Styling */
 .arrow-down {
-  font-size: 1.2rem;
-  color: #999;
-  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #888;
+  margin-top: 15px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  transition: color 0.4s ease;
 }
+
+.project-card:hover .arrow-down {
+  color: #333;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content with Zoom-In Animation */
+.modal-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close Modal Button */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+/* Modal Image */
+.modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 
 /* ===================== MODAL STYLES ===================== */
 .modal-overlay {
@@ -647,5 +708,263 @@ html, body {
   .projects-grid {
     gap: 10px;
     margin-left: 0;
+  }
+}
+
+
+
+/* Import Google Fonts */
+
+.education-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* ===================== BANNER SECTION ===================== */
+
+/* Import a modern font (optional) */
+
+.education-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust the height as desired */
+  background: url('../../Logo/image.png') no-repeat center center/cover;
+  /* If using a local image, do something like: 
+     background: url('../../assets/campus-image.jpg') no-repeat center center/cover; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.edu-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.edu-subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .education-banner {
+    height: 40vh;
+  }
+  .edu-title {
+    font-size: 2rem;
+  }
+  .edu-subtitle {
+    font-size: 1rem;
+  }
+}
+
+
+.banner-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-overlay p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* ===================== EDUCATION DETAILS ===================== */
+.edu-details {
+  padding: 60px 20px;
+  background: #fdfdfd;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.edu-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.edu-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+.edu-img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edu-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.edu-info h3 {
+  font-size: 1.8rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.edu-info p {
+  margin: 0 0 5px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.edu-info span {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* ===================== CERTIFICATES SECTION ===================== */
+.certificates-section {
+  background: #eef2f3;
+  padding: 60px 20px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-card img {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.certificate-card h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.certificate-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ===================== ACHIEVEMENTS SECTION ===================== */
+.achievements-section {
+  background: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.achievements-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.achievement-item {
+  background: #fff;
+  border-left: 4px solid #007bff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.achievement-item:hover {
+  transform: translateX(5px);
+}
+
+.achievement-item h4 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.achievement-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===================== RESPONSIVE STYLES ===================== */
+@media (max-width: 768px) {
+  .edu-banner {
+    height: 40vh;
+  }
+  .banner-overlay h1 {
+    font-size: 2.5rem;
+  }
+  .banner-overlay p {
+    font-size: 1rem;
+  }
+  .edu-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .edu-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .edu-img {
+    width: 100%;
+    height: auto;
+  }
+  .edu-info {
+    padding: 15px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .certificates-grid {
+    gap: 20px;
+  }
+  .achievement-item {
+    padding: 15px;
   }
 }
