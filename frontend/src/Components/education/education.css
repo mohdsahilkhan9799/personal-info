@@ -1,0 +1,245 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.experience-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Banner Section */
+.exp-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url('https://via.placeholder.com/1600x600?text=Experience+Banner') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-overlay p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Experience Section */
+.exp-section {
+  padding: 60px 20px;
+  background: #f7f7f7;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Cards Grid */
+.exp-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Experience Card */
+.exp-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Image */
+.exp-card-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card Info */
+.exp-card-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.exp-card-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #007bff;
+}
+
+.exp-card-info span {
+  font-size: 0.9rem;
+  color: #777;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.exp-card-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+/* Modal Header */
+.modal-header {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.modal-header-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.modal-header-overlay h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.modal-header-overlay span {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.modal-body ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.modal-body ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .exp-banner {
+    height: 40vh;
+  }
+  .banner-overlay h1 {
+    font-size: 2.5rem;
+  }
+  .banner-overlay p {
+    font-size: 1rem;
+  }
+  .exp-cards {
+    gap: 20px;
+  }
+  .exp-card {
+    max-width: 100%;
+  }
+  .modal-header {
+    height: 150px;
+  }
+  .modal-header-overlay h2 {
+    font-size: 1.5rem;
+  }
+  .modal-body h3 {
+    font-size: 1.5rem;
+  }
+  .modal-body ul li {
+    font-size: 0.9rem;
+  }
+}
