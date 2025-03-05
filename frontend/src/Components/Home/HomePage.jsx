@@ -333,7 +333,7 @@ const HomePage = () => {
               </div>
 
               <div className="exp mt-4">
-                <p>5+ Years Experience | 50+ Projects Completed | 5+ Minstry | 20+ Corporate</p>
+                <p>3+ Years Experience | 30+ Projects Completed | 2+ Minstry | 20+ Corporate</p>
               </div>
             </div>
 
